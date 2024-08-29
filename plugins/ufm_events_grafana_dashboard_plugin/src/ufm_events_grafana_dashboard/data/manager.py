@@ -17,6 +17,7 @@ from data.models.telemetry_metrics_model import TelemetryMetricsModel
 
 from data.listeners.base_listener import BaseListener
 from data.listeners.telemetry_prometheus_exporter import TelemetryPrometheusExporter
+from data.listeners.links_flapping_exporter import LinksFlappingExporter
 
 
 class DataManager:
@@ -25,7 +26,8 @@ class DataManager:
     }
 
     DATA_LISTENER_TO_CLS = {
-        ModelListeners.TELEMETRY_PROMETHEUS_EXPORTER: TelemetryPrometheusExporter
+        ModelListeners.TELEMETRY_PROMETHEUS_EXPORTER: TelemetryPrometheusExporter,
+        ModelListeners.FLAPPING_LINKS_EVENTS_EXPORTER: LinksFlappingExporter
     }
 
     def __init__(self):

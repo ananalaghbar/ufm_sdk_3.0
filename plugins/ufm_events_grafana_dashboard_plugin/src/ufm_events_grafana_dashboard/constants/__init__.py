@@ -24,6 +24,7 @@ class ModelListeners(Enum):
     ModelListeners Enums class
     """
     TELEMETRY_PROMETHEUS_EXPORTER = 1
+    FLAPPING_LINKS_EVENTS_EXPORTER = 2
 
 
 class Prometheus:
@@ -34,3 +35,14 @@ class Prometheus:
     COUNTER_VALUE = "counter_value"
     TIMESTAMP = "timestamp"
 
+
+class LinkFlapping:
+    """Link Flapping Constants CLass"""
+    LINK_ID = "link_hash_id"
+    EXPECTED_TIME = "estimated_time"
+    NODE_DESC = "node_description"
+    PARTNER_NODE_DESC = "link_partner_description"
+
+    LINK_FLAPPING_COUNTER = "link_flapping_counter"
+    FIRST_TIME_OCCURRED = "first_time_occurred"
+    LAST_TIME_OCCURRED = "last_time_occurred"
